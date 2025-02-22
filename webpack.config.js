@@ -24,17 +24,6 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpg|gif|ico)$/i,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 8192,
-                        },
-                    },
-                ],
-            },
-            {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader, 'css-loader',

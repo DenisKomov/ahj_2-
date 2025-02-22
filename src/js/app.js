@@ -1,22 +1,6 @@
-const holes = document.querySelectorAll('.field_hole');
-const numOfHoles = holes.length;
-const randomField = () => Math.floor(Math.random() * numOfHoles);
-let position;
-const goblin = document.createElement('img');
-goblin.classList.add('field_goblin');
+import Field from './Field';
+import GamePlay from './GamePlay';
 
-function newPosition() {
-    let newField;
-    do {
-        newField = randomField();
-    } while (newField === position);
-
-    position = newField;
-}
-
-function goblinAppear() {
-    newPosition();
-    holes[position].insertAdjacentElement('afterbegin', goblin);
-}
-
-setInterval(goblinAppear, 2000);
+const fields = new Field();
+const gameplay = new GamePlay(fields);
+gameplay.init();
