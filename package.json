@@ -16,6 +16,7 @@
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist"
   },
+  "repository": "https: //github.com/DenisKomov/ahj_2-",
 "license": "MIT",
 "devDependencies": {
   "@babel/cli": "7.8.4",
